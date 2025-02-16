@@ -3,6 +3,6 @@ We developed an e-commerce grocery website with features like product browsing, 
 
 
 
-Imran Hossain
-Shakil Rahman
-Jubaer Ibnul Atique
+Imran Hossain,
+Shakil Rahman,
+Jubaer Ibnul Atique.
