@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #869bc2;
+    padding: 25px;
+}
+
+.container form {
+    width: 500px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+form .row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  /* Two equal columns for billing and payment */
+    gap: 20px;
+}
+
+.column .title {
+    font-size: 30px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.column .input-box img {
+    width: 100%;  /* Ensures image is responsive */
+    max-width: 200px; /* Set a max width to avoid stretching */
+}
+
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background: #e21f1f;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+form .btn:hover {
+    background: #a82121;
+}
+

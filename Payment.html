@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Basket Payment</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html"><img src="img/logo2.2.png" class="logo" alt=""></a>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header">
+    </section>
+
+    <div class="container">
+        <form id="payment-form">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="img/pay.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" placeholder="Card Holder Name" title="Please enter Card Holder Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="tel" pattern="[0-9]*" placeholder="0000 0000 0000 0000" title="Please enter only numbers" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <input type="text" placeholder="Month" title="Please enter Expiry Month" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Year :</span>
+                        <input type="tel" pattern="[0-9]*" placeholder="0000" title="Please enter only numbers" required>
+                    </div>
+                    <div class="input-box">
+                        <span>CVV :</span>
+                        <input type="tel" pattern="[0-9]*" placeholder="000" title="Please enter only numbers" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="pay" class="btn" onclick="submitPayment()">Pay</button>
+        </form>
+    </div>
+
+    <script>
+        function handleEnterToNextInput(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const inputs = Array.from(document.querySelectorAll("input"));
+                const currentIndex = inputs.indexOf(event.target);
+
+                if (currentIndex >= 0 && currentIndex < inputs.length - 1) {
+                    inputs[currentIndex + 1].focus();
+                }
+            }
+        }
+
+        document.querySelectorAll("input").forEach(input => {
+            input.addEventListener("keydown", handleEnterToNextInput);
+        });
+
+        function submitPayment() {
+            const form = document.getElementById('payment-form');
+
+            if (form.checkValidity()) {
+                alert('Payment Successful! Thank you for your purchase.');
+
+                form.reset();
+                setTimeout(() => location.reload(), 500);
+            } else {
+                alert('Please fill out all the required fields correctly.');
+            }
+        }
+    </script>
+</body>
+
+</html>
+

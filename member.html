@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Basket</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo2.2.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a class="active" href="member.html">Member</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="about-head" class="section-p1">
+       
+        <div id="signup-form">
+            <h1>Sign Up!</h1>
+            <p>Become one of us and get more deals!!!</p>
+            <form>
+                <label for="username"><strong>Username:</strong></label>
+                <input type="text" id="username" placeholder="Enter your username">
+        
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" placeholder="Enter your email">
+        
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" placeholder="Create your password">
+        
+                <label for="confirm-password"><strong>Confirm Password:</strong></label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password">
+                <br> <br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#">Login</a></p>
+    
+    
+            <script>
+             document.getElementById("signup-form").addEventListener("submit", function(event) {event.preventDefault();  
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value; 
+
+            // Username validation
+            if (username === "") {
+                alert("Username cannot be empty.");
+                return;
+            }
+
+            // Email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Password length validation
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return;
+            }
+
+            // Password match validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            alert("Signup successful!");
+        });
+
+            </script>
+        </section>
+        </div>
+    </section>
+
+<br><br><br><br>
+
+<footer class="section-p1">
+    <div class="col">
+
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> 805 Tru Way, Kamloops, BC V2C 0C8</p>
+        <p><strong>Phone:</strong> +1 250 0000 111 /+1 250 2345 6789</p>
+        <p><strong>Hours:</strong> 07:00 - 22:00, Mon - Sun</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="member.html">Sign In</a>
+        <a href="cart.html">View Cart</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/app.jpg" alt="">
+            <img src="img/play.jpg" alt="">
+        </div>
+        <p>Secured Payment Gateways </p>
+        <img src="img/pay.png" alt="">
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2024 Nature's Basket. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
